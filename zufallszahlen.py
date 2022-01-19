@@ -105,3 +105,10 @@ def gibZufallszahlen(Summe,Anzahl,Mittelwert,Varianz):
 
 
 x = gibZufallszahlen(Summe,Anzahl,Mittelwert,Varianz)
+st.write(x)
+
+fig, ax = plt.subplots()
+ax.hist(x,bins=Anzahl)
+ax.plot([Mittelwert,Mittelwert], [0, 8],c='k')
+
+st.pyplot(fig)
