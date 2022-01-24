@@ -123,10 +123,10 @@ if x != None:
 
     st.pyplot(fig)
     st.success("Zahlen: %s" %x)
-    st.download_button(label = "Download der Zufallszahlen als txt", data = export, file_name="Zufallszahlen.txt")
+    st.download_button(label = "Download der Zufallszahlen", data = export, file_name="Zufallszahlen.txt")
 
 else:
     st.error("Berechnung nicht möglich, Bitte Parameter (Mittelwert, Varianz und Grenzen) anpassen - siehe Verteilung links")
     st.pyplot(fig)
 
-st.warning("Anmerkung: Die Zahlen werden beim Klick auf Download jedesmal neu gewählt.")
+st.warning("Anmerkung: Die Zahlen werden beim Klick auf Download jedes Mal neu gewählt.")
