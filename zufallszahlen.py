@@ -108,7 +108,7 @@ ax1.annotate("max", (Wert_max-0.4,6600),c='r')
 ax1.set_ylim(0,7000)
 ax1.set_xlabel("Verkaufswert \n \n rote Linien: Grenzen für Zufallszahlen",fontsize=14)
 ax1.set_ylabel("Anzahl", fontsize = 14)
-
+ax1.set_title("gewählte Verteilung",fontsize = 18)
 
 if x != None:
     ax2.hist(x,bins=Anzahl)
@@ -116,6 +116,7 @@ if x != None:
     ax2.annotate("Mittelwert", (Mittelwert+0.25,8),c='k')
     ax2.set_xlabel("Verkaufswert ",fontsize=14)
     ax2.set_ylabel("Anzahl", fontsize = 14)
+    ax2.set_title("Zufallszahlen",fontsize = 18)
     
     export = str(x[0])   
     for ii in range(len(x)-1):
