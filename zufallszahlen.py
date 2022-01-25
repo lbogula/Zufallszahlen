@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Jan 17 21:47:14 2022
-
 Gibt Zufallszahlen mit fester, einstellbarer Summe aus. 
-
 @author: Laura
 """
 
@@ -95,7 +93,7 @@ x = gibZufallszahlen(Summe,Anzahl,Mittelwert,Varianz)
 
 # Plotten der Daten
 
-fig = plt.figure()
+fig = plt.figure(figsize=(18,6))
 ax1 = fig.add_subplot(121)
 ax2 = fig.add_subplot(122)
 ax1.hist(data,bins=120)
@@ -106,24 +104,23 @@ ax1.annotate("Mittelwert", (Mittelwert-1.2,6600),c='k')
 ax1.annotate("min", (Wert_min-0.4,6600),c='r')
 ax1.annotate("max", (Wert_max-0.4,6600),c='r')
 ax1.set_ylim(0,7000)
-ax1.set_xlabel("Verkaufswert \n \n rote Linien: Grenzen für Zufallszahlen")
-ax1.set_ylabel("Anzahl")
-ax1.set_title("gewählte Verteilung")
-
+ax1.set_xlabel("Verkaufswert \n \n rote Linien: Grenzen für Zufallszahlen",fontsize=14)
+ax1.set_ylabel("Anzahl", fontsize = 14)
+ax1.set_title("gewählte Verteilung",fontsize = 18)
 
 if x != None:
     ax2.hist(x,bins=Anzahl)
     ax2.plot([Mittelwert,Mittelwert], [0, 8],c='k')
     ax2.annotate("Mittelwert", (Mittelwert+0.25,8),c='k')
-    ax2.set_xlabel("Verkaufswert ")
-    ax2.set_ylabel("Anzahl")
-    ax2.set_title("gezogene Zufallszahlen")
+    ax2.set_xlabel("Verkaufswert ",fontsize=14)
+    ax2.set_ylabel("Anzahl", fontsize = 14)
+    ax2.set_title("Zufallszahlen",fontsize = 18)
     
     export = str(x[0])   
     for ii in range(len(x)-1):
         export = export + "\n" + str(x[ii+1])  
 
-    #st.pyplot(fig)
+    st.pyplot(fig)
     st.success("Zahlen: %s" %x)
     st.download_button(label = "Download der Zufallszahlen", data = export, file_name="Zufallszahlen.txt")
 
