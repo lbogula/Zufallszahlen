@@ -108,6 +108,7 @@ ax1.annotate("max", (Wert_max-0.4,6600),c='r')
 ax1.set_ylim(0,7000)
 ax1.set_xlabel("Verkaufswert \n \n rote Linien: Grenzen für Zufallszahlen")
 ax1.set_ylabel("Anzahl")
+ax1.set_title("gewählte Verteilung")
 
 
 if x != None:
@@ -116,6 +117,7 @@ if x != None:
     ax2.annotate("Mittelwert", (Mittelwert+0.25,8),c='k')
     ax2.set_xlabel("Verkaufswert ")
     ax2.set_ylabel("Anzahl")
+    ax2.set_title("Zufallszahlen")
     
     export = str(x[0])   
     for ii in range(len(x)-1):
