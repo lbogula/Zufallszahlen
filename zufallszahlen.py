@@ -95,7 +95,7 @@ x = gibZufallszahlen(Summe,Anzahl,Mittelwert,Varianz)
 
 # Plotten der Daten
 
-fig = plt.figure(figsize=(18,6))
+fig = plt.figure()
 ax1 = fig.add_subplot(121)
 ax2 = fig.add_subplot(122)
 ax1.hist(data,bins=120)
@@ -106,16 +106,16 @@ ax1.annotate("Mittelwert", (Mittelwert-1.2,6600),c='k')
 ax1.annotate("min", (Wert_min-0.4,6600),c='r')
 ax1.annotate("max", (Wert_max-0.4,6600),c='r')
 ax1.set_ylim(0,7000)
-ax1.set_xlabel("Verkaufswert \n \n rote Linien: Grenzen für Zufallszahlen",fontsize=14)
-ax1.set_ylabel("Anzahl", fontsize = 14)
+ax1.set_xlabel("Verkaufswert \n \n rote Linien: Grenzen für Zufallszahlen")
+ax1.set_ylabel("Anzahl")
 
 
 if x != None:
     ax2.hist(x,bins=Anzahl)
     ax2.plot([Mittelwert,Mittelwert], [0, 8],c='k')
     ax2.annotate("Mittelwert", (Mittelwert+0.25,8),c='k')
-    ax2.set_xlabel("Verkaufswert ",fontsize=14)
-    ax2.set_ylabel("Anzahl", fontsize = 14)
+    ax2.set_xlabel("Verkaufswert ")
+    ax2.set_ylabel("Anzahl")
     
     export = str(x[0])   
     for ii in range(len(x)-1):
