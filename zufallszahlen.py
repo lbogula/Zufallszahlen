@@ -117,13 +117,13 @@ if x != None:
     ax2.annotate("Mittelwert", (Mittelwert+0.25,8),c='k')
     ax2.set_xlabel("Verkaufswert ")
     ax2.set_ylabel("Anzahl")
-    ax2.set_title("Zufallszahlen")
+    ax2.set_title("gezogene Zufallszahlen")
     
     export = str(x[0])   
     for ii in range(len(x)-1):
         export = export + "\n" + str(x[ii+1])  
 
-    st.pyplot(fig)
+    #st.pyplot(fig)
     st.success("Zahlen: %s" %x)
     st.download_button(label = "Download der Zufallszahlen", data = export, file_name="Zufallszahlen.txt")
 
