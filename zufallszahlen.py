@@ -123,7 +123,7 @@ if x != None:
     for ii in range(len(x)-1):
         export = export + "\n" + str(x[ii+1])  
 
-    #st.pyplot(fig)
+    st.pyplot(fig)
     st.success("Zahlen: %s" %x)
     st.download_button(label = "Download der Zufallszahlen", data = export, file_name="Zufallszahlen.txt")
 
